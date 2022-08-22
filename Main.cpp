@@ -67,4 +67,5 @@ int main()
 {
 	testPolynomial();
 	testRational();
+	while (1);
 }

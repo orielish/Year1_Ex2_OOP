@@ -93,7 +93,8 @@ void Polynomial:: print() const {
 }
 
 //operators
-Polynomial Polynomial::operator+(const Polynomial& other){
+Polynomial Polynomial::operator+(const Polynomial& other)const
+{
 	int i,temp;
 	int LocalMinDegree , LocalMaxDegree;
 	bool thisBigger = false;
@@ -122,7 +123,8 @@ Polynomial Polynomial::operator+(const Polynomial& other){
 	}
 	return Result;
 }
-Polynomial Polynomial::operator-(const Polynomial& other){
+Polynomial Polynomial::operator-(const Polynomial& other)const
+{
 	int i,temp;
 	int LocalMinDegree , LocalMaxDegree;
 	bool thisBigger = false;
@@ -161,20 +163,20 @@ void Polynomial::operator=(const Polynomial& other)
 		this->setCoeff(i,other.getCoeff(i));
 	}
 }
-Polynomial Polynomial:: operator*(const Polynomial& other)const{
-    Polynomial temp(this->degree + other.degree);
-    for (int i = 0; i <=this->trueDegree; i++)
-    {
-        if (this->arr[i] == 0) continue;
-        for (int j = 0; j <= other.degree; j++)
-        {
-            temp.arr[i + j] += this->arr[i] * other.arr[j];
-        }
-    }
-    temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
-    return temp;
-
-}
+//Polynomial Polynomial:: operator*(const Polynomial& other)const{
+//    Polynomial temp(this->degree + other.degree);
+//    for (int i = 0; i <=this->trueDegree; i++)
+//    {
+//        if (this->arr[i] == 0) continue;
+//        for (int j = 0; j <= other.degree; j++)
+//        {
+//            temp.arr[i + j] += this->arr[i] * other.arr[j];
+//        }
+//    }
+//    temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
+//    return temp;
+//
+//}
 
 
 

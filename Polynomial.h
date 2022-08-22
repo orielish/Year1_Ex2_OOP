@@ -22,7 +22,6 @@ public:
 	Polynomial operator+(const Polynomial& other)const;
 	Polynomial operator-(const Polynomial& other)const;
 	Polynomial operator*(const Polynomial& other)const;
-	//Polynomial operator*(const Polynomial& other);
 	void operator=(const Polynomial& other);
 
 	//Gets
