@@ -161,6 +161,20 @@ void Polynomial::operator=(const Polynomial& other)
 		this->setCoeff(i,other.getCoeff(i));
 	}
 }
+Polynomial Polynomial:: operator*(const Polynomial& other)const{
+    Polynomial temp(this->degree + other.degree);
+    for (int i = 0; i <=this->trueDegree; i++)
+    {
+        if (this->arr[i] == 0) continue;
+        for (int j = 0; j <= other.degree; j++)
+        {
+            temp.arr[i + j] += this->arr[i] * other.arr[j];
+        }
+    }
+    temp.trueDegree = temp.setDegree(temp.arr, temp.degree);
+    return temp;
+
+}
 
 
 
