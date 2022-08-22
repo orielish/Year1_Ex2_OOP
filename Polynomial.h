@@ -3,10 +3,10 @@ class Polynomial
 {
 	
 private:
-	const static int size = 20;   // ���� ���� �������
-	double _a[size];              // ���� �������
-	int _degree;                  // ���� ������ ������� �����
-	static int MaxDegree;         // Global highest Real Degree 
+	const static int size = 20;  
+	double _a[size];             
+	int _degree;                 
+	static int MaxDegree;        
 
 
 public:
@@ -19,8 +19,9 @@ public:
 	void copyP(Polynomial&);
 
 	//operators
-	Polynomial operator+(const Polynomial& other);
-	Polynomial operator-(const Polynomial& other);
+	Polynomial operator+(const Polynomial& other)const;
+	Polynomial operator-(const Polynomial& other)const;
+	Polynomial operator*(const Polynomial& other)const;
 	//Polynomial operator*(const Polynomial& other);
 	void operator=(const Polynomial& other);
 
